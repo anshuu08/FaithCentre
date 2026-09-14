@@ -20,7 +20,7 @@ export default function Journey() {
         <div className="journey-empty-card">
           <Milestone className="journey-empty-icon" />
           <p className="journey-empty-text">
-            The story of God's faithfulness and work through Faith Centre will be chronicled here.
+            The story of God's faithfulness and work through Faith Center will be chronicled here.
           </p>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function LocationModal({ isOpen, onClose }) {
         <div className="modal-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <MapPin size={24} style={{ color: '#ef4444' }} />
-            <h3 id="location-modal-title" className="modal-title">FAITH CENTRE</h3>
+            <h3 id="location-modal-title" className="modal-title">FAITH CENTER</h3>
           </div>
           <button
             type="button"

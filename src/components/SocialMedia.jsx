@@ -39,11 +39,11 @@ export default function SocialMedia() {
   ];
 
   return (
-    <section className="section" id="community" aria-label="Connect With Faith Centre">
+    <section className="section" id="community" aria-label="Connect With Faith Center">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <h2 className="section-title">CONNECT WITH FAITH CENTRE</h2>
+          <h2 className="section-title">CONNECT WITH FAITH CENTER</h2>
           <div className="section-divider">
             <div className="section-divider-line" />
             <div className="section-divider-dot" />

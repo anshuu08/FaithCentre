@@ -47,7 +47,7 @@ export default function Books() {
                 <h3 className="book-info-title">{book.title}</h3>
                 {book.subtitle && <p className="book-info-subtitle">{book.subtitle}</p>}
                 <p className="book-info-author">— {book.author} —</p>
-                <span className="book-info-badge">Available at Faith Centre</span>
+                <span className="book-info-badge">Available at Faith Center</span>
               </div>
             </div>
           ))}

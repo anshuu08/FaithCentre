@@ -32,7 +32,7 @@ export default function Home({ onOpenTestimonyModal, onOpenLocationModal }) {
       {/* 8. Partnership & Generosity (Sow a Seed) */}
       <SowSeed />
 
-      {/* 9. Community & Fellowship (Connect With Faith Centre) */}
+      {/* 9. Community & Fellowship (Connect With Faith Center) */}
       <SocialMedia />
     </main>
   );

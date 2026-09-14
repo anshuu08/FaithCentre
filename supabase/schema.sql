@@ -1,5 +1,5 @@
 -- ============================================================
--- FAITH CENTRE — NEHEMIAH DAVID
+-- FAITH CENTER — NEHEMIAH DAVID
 -- Database Schema for Supabase PostgreSQL
 -- Secure Anonymous Testimonials with Self-Delete (No Authentication Required)
 -- ============================================================
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS public.testimonials (
 );
 
 -- Documentation comments
-COMMENT ON TABLE public.testimonials IS 'Faith Centre visitor and member testimonies with secure anonymous self-delete';
+COMMENT ON TABLE public.testimonials IS 'Faith Center visitor and member testimonies with secure anonymous self-delete';
 COMMENT ON COLUMN public.testimonials.id IS 'Unique identifier for each testimony';
 COMMENT ON COLUMN public.testimonials.name IS 'Name of the person sharing the testimony';
 COMMENT ON COLUMN public.testimonials.testimony IS 'The testimony text';

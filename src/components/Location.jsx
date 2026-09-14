@@ -20,7 +20,7 @@ export default function Location({ onOpenLocationModal }) {
 
         {/* Location Card */}
         <div className="location-card">
-          {/* Animated Geographic Locator Visualization (India -> AP -> Guntur -> Faith Centre) */}
+          {/* Animated Geographic Locator Visualization (India -> AP -> Guntur -> Faith Center) */}
           <LocationGeoAnimation onOpenLocationModal={onOpenLocationModal} />
 
 

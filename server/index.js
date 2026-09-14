@@ -55,7 +55,7 @@ app.get('*', (req, res, next) => {
     if (err) {
       // In dev mode when dist doesn't exist yet, return helpful json
       res.status(200).json({
-        message: 'Faith Centre API Server is running. In dev mode, please view frontend on Vite dev server.'
+        message: 'Faith Center API Server is running. In dev mode, please view frontend on Vite dev server.'
       });
     }
   });
@@ -63,7 +63,7 @@ app.get('*', (req, res, next) => {
 
 app.listen(PORT, async () => {
   console.log(`\n==================================================`);
-  console.log(`✨ FAITH CENTRE — Server running on port ${PORT}`);
+  console.log(`✨ FAITH CENTER — Server running on port ${PORT}`);
   console.log(`🌐 API Base: http://localhost:${PORT}/api`);
   console.log(`==================================================\n`);
   

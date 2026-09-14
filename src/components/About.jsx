@@ -80,7 +80,7 @@ export default function About() {
               </div>
               <div className="pastors-caption">
                 <h3 className="pastors-caption-name">Pastor Nehemiah David & Pastor Prathibha</h3>
-                <p className="pastors-caption-role">Founders & Senior Pastors — Faith Centre</p>
+                <p className="pastors-caption-role">Founders & Senior Pastors — Faith Center</p>
               </div>
             </div>
           </div>

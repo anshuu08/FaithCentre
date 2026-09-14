@@ -111,7 +111,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p>© {currentYear} Faith Centre - Nehemiah David. All rights reserved.</p>
+          <p>© {currentYear} Faith Center - Nehemiah David. All rights reserved.</p>
           <p>A place of faith, hope, transformation and God's presence.</p>
         </div>
       </div>

@@ -133,7 +133,7 @@ export default function Navbar({ onOpenTestimonyModal }) {
           <Link
             to="/"
             className="navbar-brand"
-            aria-label="Faith Centre Home"
+            aria-label="Faith Center Home"
             onClick={(e) => handleNavClick(e, navItems[0])}
           >
             <span className="brand-title">{siteConfig.churchName}</span>

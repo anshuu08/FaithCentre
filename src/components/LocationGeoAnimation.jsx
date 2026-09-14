@@ -6,7 +6,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
   // Step 0: India Overview
   // Step 1: Andhra Pradesh Zoom & Highlight
   // Step 2: Guntur District Zoom
-  // Step 3: Faith Centre Pin & Breathing Pulse
+  // Step 3: Faith Center Pin & Breathing Pulse
   const [activeStep, setActiveStep] = useState(0);
   const timerRef = useRef(null);
 
@@ -14,14 +14,14 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
     { id: 0, label: 'INDIA' },
     { id: 1, label: 'ANDHRA PRADESH' },
     { id: 2, label: 'GUNTUR' },
-    { id: 3, label: 'FAITH CENTRE' }
+    { id: 3, label: 'FAITH CENTER' }
   ];
 
   // Auto-progressing sequence:
   // Step 0: India (2.8s)
   // Step 1: Andhra Pradesh (2.8s)
   // Step 2: Guntur (2.8s)
-  // Step 3: Faith Centre pin (5.5s)
+  // Step 3: Faith Center pin (5.5s)
   useEffect(() => {
     let current = 0;
     const scheduleNext = () => {
@@ -49,7 +49,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
   // Canvas ViewBox: 0 0 600 680 (Center: 300, 340)
   // AP Center: 261, 423
   // Guntur Center: 247, 415
-  // Faith Centre: 254.7, 414.3
+  // Faith Center: 254.7, 414.3
   const getCameraStyle = () => {
     switch (activeStep) {
       case 1:
@@ -65,7 +65,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
           transformOrigin: '247px 415px'
         };
       case 3:
-        // Faith Centre Precision Pin Zoom
+        // Faith Center Precision Pin Zoom
         return {
           transform: 'translate(45.3px, -74.3px) scale(9.5)',
           transformOrigin: '254.7px 414.3px'
@@ -80,7 +80,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
     }
   };
 
-  const fc = indiaMapData.faithCentre;
+  const fc = indiaMapData.faithCenter;
 
   return (
     <div
@@ -139,7 +139,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
               <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(16, 84, 103, 0.05)" strokeWidth="0.8" />
             </pattern>
 
-            {/* Glowing filter for Faith Centre Red Pin */}
+            {/* Glowing filter for Faith Center Red Pin */}
             <filter id="redPinGlow" x="-50%" y="-50%" width="200%" height="200%">
               <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#ef4444" floodOpacity="0.75" />
             </filter>
@@ -257,7 +257,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
               </g>
             )}
 
-            {/* 4. FAITH CENTRE EXACT PIN & PULSING RINGS */}
+            {/* 4. FAITH CENTER EXACT PIN & PULSING RINGS */}
             {/* Pulsing Ripple Rings */}
             {activeStep >= 2 && (
               <>
@@ -292,7 +292,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
               />
               <circle cx={fc.x} cy={fc.y - 7} r="1.15" fill="#ffffff" />
 
-              {/* Faith Centre Floating Badge on Step 3 */}
+              {/* Faith Center Floating Badge on Step 3 */}
               {activeStep === 3 && (
                 <g className="geo-fc-callout">
                   <rect
@@ -316,7 +316,7 @@ export default function LocationGeoAnimation({ onOpenLocationModal }) {
                     fontWeight="700"
                     letterSpacing="0.08em"
                   >
-                    FAITH CENTRE
+                    FAITH CENTER
                   </text>
                   {/* Subtle Pointer Arrow down to the pin */}
                   <polygon

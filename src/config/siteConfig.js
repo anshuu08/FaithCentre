@@ -1,5 +1,5 @@
 export const siteConfig = {
-  churchName: "FAITH CENTRE",
+  churchName: "FAITH CENTER",
   pastorName: "NEHEMIAH DAVID",
   tagline: "A place of faith, hope, transformation and God's presence.",
   
@@ -11,7 +11,7 @@ export const siteConfig = {
 
   pastors: {
     title: "ABOUT US",
-    image: "/assets/pastors.png",
+    image: "/assets/Pastors.png",
     alt: "Pastor Nehemiah David and Pastor Prathibha",
     paragraphs: [
       "Nehemiah David and his wife, Prathibha, are the founders and senior pastors of FaithCenter, one of the mega churches in Guntur, Andhra Pradesh, India. Pastor Nehemiah's journey of faith began at home. He was born into the family of a devoted man of God, Pastor Devaraju and Pastor Jayakumari of Amnos Ministries, Vijayawada, and grew up watching a life built on trust in God. He later graduated from Rhema Bible Training Center, Singapore, in 2009.",
@@ -26,7 +26,7 @@ export const siteConfig = {
       schedule: "7:00 AM First Service | 9:30 AM Second Service | 6:30 PM Online",
       description: "Encounter, Equip, Empower. A church for a brighter tomorrow. Experience vibrant worship, transformative teaching, and authentic fellowship.",
       image: "/assets/s1.jpeg",
-      alt: "Sunday Services at Faith Centre"
+      alt: "Sunday Services at Faith Center"
     },
     {
       id: "s2",
