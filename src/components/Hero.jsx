@@ -31,35 +31,71 @@ export default function Hero({ onOpenTestimonyModal }) {
       {/* Subtle Cinematic Overlay */}
       <div className="hero-overlay" />
 
-      {/* Glass Content Panel */}
-      <div className="container hero-content-container">
-        <div className="hero-glass-panel">
-          <span className="hero-eyebrow">
-            Welcome to the House of the Lord
-          </span>
-
-
-          <h1 className="hero-title">{siteConfig.churchName}</h1>
-          <div className="hero-pastor-title">— {siteConfig.pastorName} —</div>
-
-          <p className="hero-tagline">{siteConfig.tagline}</p>
-
-          <div className="hero-actions">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={onOpenTestimonyModal}
-            >
-              SHARE YOUR TESTIMONY
-            </button>
-            <button
-              type="button"
-              className="btn btn-glass"
-              onClick={scrollToAbout}
-            >
-              DISCOVER OUR STORY
-            </button>
+      {/* Minimalist Content */}
+      <div className="container hero-content-container" style={{ animation: 'heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}>
+        <div style={{ transform: 'translateY(-6vh)', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+          <h1 className="hero-title" style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', letterSpacing: '-0.03em', fontWeight: '800', marginBottom: '0px', textShadow: '0 2px 10px rgba(0,0,0,0.5)', color: '#ffffff' }}>
+            {siteConfig.churchName}
+          </h1>
+          <div style={{ fontSize: 'clamp(1rem, 2vw, 1.3rem)', letterSpacing: '0.3em', color: '#ffffff', textTransform: 'uppercase', marginTop: '10px', textShadow: '0 0 20px rgba(14, 165, 233, 0.9), 0 0 40px rgba(14, 165, 233, 0.5)' }}>
+            {siteConfig.pastorName}
           </div>
+        </div>
+
+        <div style={{ marginTop: '20px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            onClick={onOpenTestimonyModal}
+            style={{
+              background: '#0f172a',
+              color: 'white',
+              border: 'none',
+              borderRadius: '30px',
+              padding: '14px 32px',
+              fontSize: '1.05rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
+              transition: 'transform 0.2s ease, background 0.2s ease'
+            }}
+            onMouseOver={(e) => { 
+              e.currentTarget.style.transform = 'translateY(-2px)'; 
+              e.currentTarget.style.background = '#1e293b'; 
+            }}
+            onMouseOut={(e) => { 
+              e.currentTarget.style.transform = 'none'; 
+              e.currentTarget.style.background = '#0f172a'; 
+            }}
+          >
+            Add Testimony
+          </button>
+
+          <button
+            type="button"
+            onClick={scrollToAbout}
+            style={{
+              background: '#0f172a',
+              color: 'white',
+              border: 'none',
+              borderRadius: '30px',
+              padding: '14px 32px',
+              fontSize: '1.05rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
+              transition: 'transform 0.2s ease, background 0.2s ease'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.background = '#1e293b'; }}
+            onMouseOut={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.background = '#0f172a'; }}
+          >
+            Discover our story <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>→</span>
+          </button>
         </div>
       </div>
 
