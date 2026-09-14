@@ -56,13 +56,6 @@ export const createTestimonial = async (req, res) => {
     let { name, testimony, promise, message_details, delete_token_hash } = req.body;
 
     // 1. Validate required fields
-    if (!name || typeof name !== 'string' || !name.trim()) {
-      return res.status(400).json({
-        success: false,
-        error: 'Your name is required.'
-      });
-    }
-
     if (!testimony || typeof testimony !== 'string' || !testimony.trim()) {
       return res.status(400).json({
         success: false,
@@ -79,14 +72,14 @@ export const createTestimonial = async (req, res) => {
     }
 
     // 2. Sanitize inputs
-    const sanitizedName = sanitizeText(name);
+    const sanitizedName = (name && typeof name === 'string' && name.trim()) ? sanitizeText(name) : 'Anonymous';
     const sanitizedTestimony = sanitizeText(testimony);
     const sanitizedPromise = promise ? sanitizeText(promise) : null;
     const sanitizedMessageDetails = message_details ? sanitizeText(message_details) : null;
     const normalizedTokenHash = delete_token_hash.trim().toLowerCase();
 
     // 3. Length validations
-    if (sanitizedName.length < 2 || sanitizedName.length > 100) {
+    if (sanitizedName !== 'Anonymous' && (sanitizedName.length < 2 || sanitizedName.length > 100)) {
       return res.status(400).json({
         success: false,
         error: 'Name must be between 2 and 100 characters.'

@@ -58,18 +58,13 @@ export default function TestimonyModal({ isOpen, onClose, onTestimonySubmitted }
     setErrorMessage('');
 
     // Basic frontend validations
-    if (!formData.name.trim()) {
-      setErrorMessage('Please enter your name.');
-      return;
-    }
-
     if (!formData.testimony.trim()) {
       setErrorMessage('Please enter your testimony.');
       return;
     }
 
-    if (formData.name.trim().length < 2) {
-      setErrorMessage('Name must be at least 2 characters.');
+    if (formData.name.trim() !== '' && formData.name.trim().length < 2) {
+      setErrorMessage('If provided, name must be at least 2 characters.');
       return;
     }
 
@@ -173,11 +168,10 @@ export default function TestimonyModal({ isOpen, onClose, onTestimonySubmitted }
                 </div>
               )}
 
-              {/* 1. Name (Required) */}
+              {/* 1. Name */}
               <div className="form-group">
                 <label htmlFor="testimony-name" className="form-label">
                   <span>Your Name</span>
-                  <span className="badge-required">Required</span>
                 </label>
                 <input
                   ref={nameInputRef}
@@ -189,7 +183,6 @@ export default function TestimonyModal({ isOpen, onClose, onTestimonySubmitted }
                   placeholder="e.g. John Emmanuel"
                   className="form-input"
                   maxLength={100}
-                  required
                   disabled={loading}
                 />
               </div>

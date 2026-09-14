@@ -5,13 +5,13 @@ import LocationGeoAnimation from './LocationGeoAnimation';
 
 export default function Location({ onOpenLocationModal }) {
   return (
-    <section id="location" className="section section-alt" aria-label="Find Us Location">
+    <section id="location" className="section section-alt" aria-label="Find Us Location" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
       <div className="container">
         {/* Section Header */}
-        <div className="section-header">
+        <div className="section-header" style={{ marginBottom: '24px' }}>
           {/* <span className="section-tag">Gather With Us</span> */}
-          <h2 className="section-title">{siteConfig.location.heading}</h2>
-          <div className="section-divider">
+          <h2 className="section-title" style={{ marginBottom: '8px' }}>{siteConfig.location.heading}</h2>
+          <div className="section-divider" style={{ marginTop: '12px' }}>
             <div className="section-divider-line" />
             <div className="section-divider-dot" />
             <div className="section-divider-line" />
